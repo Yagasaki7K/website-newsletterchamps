@@ -40,10 +40,12 @@ function App() {
                                 <div className="newsContent"key={index}>
                                     <h2>{news.titleText}</h2>
                                     <p>{news.mainText}</p>
+                                    <hr />
                                 </div>
                             )
                         })
                     }
+                    <p>Todos os direitos reservados ao <a href="https://filipedeschamps.com.br/newsletter" className="anchor">Filipe Deschamps</a></p>
                 </header>
             </div>
         </NewsDetails>

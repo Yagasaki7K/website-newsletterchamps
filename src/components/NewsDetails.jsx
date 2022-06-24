@@ -22,6 +22,11 @@ const NewsDetails = styled.div`
         font-size: 1.2rem;
     }
 
+    .anchor {
+        color: #f0da50;
+        font-size: 1rem;
+    }
+
     .newsContent {
         padding: 0rem 35rem;
 
