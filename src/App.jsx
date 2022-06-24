@@ -23,20 +23,25 @@ function App() {
     }, [])
 
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src="https://github.com/filipedeschamps.png" width={200}/>
-                <h1>Unofficial Newsletter Deschamps</h1>
-                {DataNews.map((news, index) => {
-                    return (
-                        <div className="newsContent"key={index}>
-                            <h2>{news.titleText}</h2>
-                            <p>{news.mainText}</p>
-                        </div>
-                    )
-                })}
-            </header>
-        </div>
+        <NewsDetails>
+            <div className="App">
+                <header className="App-header">
+                    <img src="https://github.com/filipedeschamps.png" width={200}/>
+                    <h1>Unofficial Newsletter by Filipe Deschamps</h1>
+                    <a href="https://filipedeschamps.com.br/newsletter" target="_blank">Receba as notícias em seu e-mail</a>
+                    {
+                        DataNews && DataNews.length > 0 &&DataNews.map((news, index) => {
+                            return (
+                                <div className="newsContent"key={index}>
+                                    <h2>{news.titleText}</h2>
+                                    <p>{news.mainText}</p>
+                                </div>
+                            )
+                        })
+                    }
+                </header>
+            </div>
+        </NewsDetails>
     )
 }
 
