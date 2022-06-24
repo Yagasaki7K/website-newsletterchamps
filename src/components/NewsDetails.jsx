@@ -10,6 +10,13 @@ const NewsDetails = styled.div`
         border-radius: 50%;
     }
 
+    .header {
+        p {
+            margin: -20px 0 20px 0;
+            font-style: italic;
+        }
+    }
+
     a {
         color: #f0da50;
         font-size: 1.2rem;
