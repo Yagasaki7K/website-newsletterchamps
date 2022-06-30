@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     async function getNews() {
-        const response = await fetch('https://api-newsletter.herokuapp.com/news');
+        const response = await fetch('https://api-newsletter.herokuapp.com/news/filipedeschamps');
 
         if (response.ok) {
             const data = await response.json();
@@ -38,8 +38,8 @@ function App() {
                         DataNews && DataNews.length > 0 &&DataNews.map((news, index) => {
                             return (
                                 <div className="newsContent"key={index}>
-                                    <h2>{news.titleText}</h2>
-                                    <p>{news.mainText}</p>
+                                    <h2>{news.title}</h2>
+                                    <p>{news.content}</p>
                                     <hr />
                                 </div>
                             )
