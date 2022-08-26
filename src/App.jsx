@@ -6,6 +6,7 @@ import NewsDetails from './components/NewsDetails';
 function App() {
 
     const [DataNews, setDataNews] = useState({})
+    const [Loading, setLoading] = useState(true)
 
   useEffect(() => {
     async function getNews() {
@@ -14,8 +15,10 @@ function App() {
         if (response.ok) {
             const data = await response.json();
             setDataNews(data.data)
-            console.log('D:', data)
-            console.log(DataNews)
+            
+            if (DataNews != '') {
+                setLoading(false)
+            }
         }
     }
 
@@ -34,10 +37,11 @@ function App() {
                         <p>Atualizadas de Segunda a Sexta às 11 horas da manhã</p>
                     </div>
                     <a href="https://filipedeschamps.com.br/newsletter" target="_blank">Receba as notícias em seu e-mail</a>
+
                     {
                         DataNews && DataNews.length > 0 &&DataNews.map((news, index) => {
                             return (
-                                <div className="newsContent"key={index}>
+                                <div className="newsContent" key={index}>
                                     <h2>{news.title}</h2>
                                     <p>{news.content}</p>
                                     <hr />
@@ -46,6 +50,8 @@ function App() {
                         })
                     }
                     <p>Todos os direitos reservados ao <a href="https://filipedeschamps.com.br/newsletter" className="anchor">Filipe Deschamps</a></p>
+
+                    {Loading ? <h1>Carregando ..</h1> : null}
                 </header>
             </div>
         </NewsDetails>

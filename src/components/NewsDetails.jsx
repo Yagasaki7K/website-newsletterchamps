@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
 const NewsDetails = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     .App {
         text-align: center;
         display: flex;
