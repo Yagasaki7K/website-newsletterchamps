@@ -6,8 +6,6 @@
    <a href="https://www.linkedin.com/in/andersonmarlon/">
       <img alt="AndersonMarlon" src="https://img.shields.io/badge/-AndersonMarlon-f0da50?style=flat&logo=Linkedin&logoColor=white" />
    </a>
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Yagasaki7K/website-newsletterchamps?color=f0da50">
-
   <a href="https://github.com/Yagasaki7K/website-newsletterchamps/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Yagasaki7K/website-newsletterchamps?color=f0da50">
   </a>
